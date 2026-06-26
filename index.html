@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards - Inteligência Artificial</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-top:30px;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:40px;
+}
+
+.card{
+    width:300px;
+    height:420px;
+    perspective:1000px;
+    cursor:pointer;
+}
+
+.card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform .8s;
+    transform-style:preserve-3d;
+}
+
+.card.flipped .card-inner{
+    transform:rotateY(180deg);
+}
+
+.front, .back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:15px;
+    overflow:hidden;
+    backface-visibility:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+    display:flex;
+    flex-direction:column;
+    background:white;
+}
+
+.back{
+    transform:rotateY(180deg);
+}
+
+img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.texto{
+    padding:20px;
+    text-align:center;
+}
+
+h2{
+    color:#0b3d91;
+}
+
+p{
+    font-size:18px;
+}
+
+span{
+    color:#555;
+    font-size:14px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Flashcards - Inteligência Artificial na Sociedade Brasileira</h1>
+
+<div class="container">
+
+<!-- CARD 1 -->
+<div class="card" onclick="virar(this)">
+<div class="card-inner">
+
+<div class="front">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600" alt="">
+<div class="texto">
+<p>A Inteligência Artificial vai substituir todos os empregos no Brasil.</p>
+<span>Clique para virar.</span>
+</div>
+</div>
+
+<div class="back">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600" alt="">
+<div class="texto">
+<h2>❌ Errado</h2>
+<p>A IA pode automatizar tarefas, mas também cria novas profissões e transforma o mercado de trabalho.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="card" onclick="virar(this)">
+<div class="card-inner">
+
+<div class="front">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600" alt="">
+<div class="texto">
+<p>Apenas grandes empresas podem utilizar Inteligência Artificial.</p>
+<span>Clique para virar.</span>
+</div>
+</div>
+
+<div class="back">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600" alt="">
+<div class="texto">
+<h2>❌ Errado</h2>
+<p>Hoje pequenas empresas, escolas e pessoas comuns já utilizam IA em aplicativos e serviços digitais.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="card" onclick="virar(this)">
+<div class="card-inner">
+
+<div class="front">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="">
+<div class="texto">
+<p>A Inteligência Artificial pode melhorar a educação.</p>
+<span>Clique para virar.</span>
+</div>
+</div>
+
+<div class="back">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="">
+<div class="texto">
+<h2>✅ Correto</h2>
+<p>Ela pode personalizar atividades, auxiliar professores e oferecer apoio aos estudantes em diferentes níveis de aprendizagem.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="card" onclick="virar(this)">
+<div class="card-inner">
+
+<div class="front">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600" alt="">
+<div class="texto">
+<p>A IA pode contribuir para a saúde pública.</p>
+<span>Clique para virar.</span>
+</div>
+</div>
+
+<div class="back">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600" alt="">
+<div class="texto">
+<h2>✅ Correto</h2>
+<p>Hospitais podem utilizar IA para auxiliar diagnósticos, organizar informações médicas e apoiar decisões clínicas.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+function virar(card){
+    card.classList.toggle("flipped");
+}
+
+</script>
+
+</body>
+</html>
